@@ -1,0 +1,9 @@
+*.Rmd
+_site.yml
+*.rda
+*.rds
+src/*.rda
+src/*.rds
+src/*.info
+src/.gitignore
+docs/src/

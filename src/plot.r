@@ -1,3 +1,5 @@
+nuc=c('A','C','G','T')
+
 bnorm <- function(d){
 x=split(d, substr(d[,1],1,1))
 m=t(do.call(cbind,lapply(x,function(v) v[order(v[,1]),2])))
@@ -19,6 +21,15 @@ d[,2]=log(d[,2]+1)
 d
 }
 
+odd <- function(d) as.numeric(d[seq(1,5,2)])
+even <- function(d) as.numeric(d[seq(2,6,2)])
+swap <- function(d,i,j){
+tmp=d[i]
+d[i]=d[j]
+d[j]=tmp
+d
+}
+
 readModel <- function(f){
 x=readLines(f)
 i=grep('#',x)
@@ -34,5 +45,17 @@ setNames(
 })
 }
 
-nuc=c('A','C','G','T')
-
+plotSunburst <- function(f){
+x=read.table(f,fill=T)
+d=c(odd(x[x[,1]=="Processed",3]), 0, odd(x[x[,1]=="short",3]), as.numeric(x[x[,1]=="written",3]))[-c(5,8)]
+d[1]=d[1]/2
+d[4]=d[9]=d[1]-d[2]-d[3]
+d=swap(d,6,7)
+plot_ly(
+  labels = c("Total reads", "Forward adapter", "Reverse adapter", "No adapter", "Forward barcode", "No barcode", "Reverse barcode", "No barcode ", ""),
+  parents = c("", "Total reads", "Total reads", "Total reads", "Forward adapter", "Forward adapter", "Reverse adapter", "Reverse adapter", "No adapter"),
+  values = d,
+  type = 'sunburst',
+  branchvalues = 'total'
+)
+}

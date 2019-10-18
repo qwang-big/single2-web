@@ -11,7 +11,7 @@
 
 
 
-<title>FC1.utf8.md</title>
+<title>README.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -325,33 +325,9 @@ $(document).ready(function () {
 </div>
 
 
-<div id="model-statistics" class="section level2 tabset tabset-fade">
-<h2>Model statistics</h2>
-<p>Exon alignment</p>
-<div id="base-substitutions" class="section level3">
-<h3>Base substitutions</h3>
-<pre class="r"><code>ggplot(bnorm(m$`Base substitutions`),aes(Var1,Var2))+geom_tile(aes(fill = value))+geom_text(aes(label=scales::percent(value)))+labs(x=&quot;From&quot;,y=&quot;To&quot;)+scale_fill_gradientn(colors=c(&quot;white&quot;,&quot;red&quot;,&quot;purple&quot;),values=scales::rescale(c(0,0.04,1)),limits=c(0,1))</code></pre>
-<p><img src="FC1_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-</div>
-<div id="indel-length" class="section level3">
-<h3>Indel length</h3>
-<pre class="r"><code>plot(logV2(m$`Insertion freq`),xlab=&#39;number of indels&#39;,ylab=&#39;counts (log)&#39;,type=&#39;b&#39;)
-lines(logV2(m$`Deletion freq`),type=&#39;b&#39;,col=&#39;red&#39;)
-legend(&quot;topright&quot;, legend=c(&quot;Ins&quot;,&quot;Del&quot;), col=c(&#39;black&#39;,&#39;red&#39;), lty=1)</code></pre>
-<p><img src="FC1_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
-<div id="insertions" class="section level3">
-<h3>Insertions</h3>
-<pre class="r"><code>tmp=calcPWM(m$Insertions)
-lapply(tmp,function(d) seqLogo(makePWM(d), ic.scale=FALSE))</code></pre>
-<p><img src="FC1_files/figure-html/unnamed-chunk-3-1.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-2.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-3.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-4.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-5.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-6.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-7.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-8.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-9.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-10.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-11.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-12.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-3-13.png" width="672" /></p>
-</div>
-<div id="deletions" class="section level3">
-<h3>Deletions</h3>
-<pre class="r"><code>tmp=calcPWM(m$Deletions)
-lapply(tmp,function(d) seqLogo(makePWM(d), ic.scale=FALSE))</code></pre>
-<p><img src="FC1_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-2.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-3.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-4.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-5.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-6.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-7.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-8.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-9.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-10.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-11.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-12.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-13.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-14.png" width="672" /><img src="FC1_files/figure-html/unnamed-chunk-4-15.png" width="672" /></p>
-</div>
+<div id="single2-web" class="section level1">
+<h1>single2-web</h1>
+<p><a href="https://qwang-big.github.io/single2-web/" class="uri">https://qwang-big.github.io/single2-web/</a></p>
 </div>
 
 

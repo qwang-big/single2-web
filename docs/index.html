@@ -11,7 +11,7 @@
 
 
 
-<title>Overview</title>
+<title>index.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -328,24 +328,26 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Overview</h1>
 
 </div>
 
 
+<div id="overview" class="section level2 tabset tabset-fade">
+<h2>Overview</h2>
 <p>Nanopore reads</p>
-<pre class="r"><code>library(plotly)
-
-p &lt;- plot_ly(
-  labels = c(&quot;Total reads&quot;, &quot;Forward adapter&quot;, &quot;Reverse adapter&quot;, &quot;No adapter&quot;, &quot;Forward barcode&quot;, &quot;Forward adapter, no barcode&quot;, &quot;Reverse barcode&quot;, &quot;Reverse adapter, no barcode&quot;, &quot;&quot;),
-  parents = c(&quot;&quot;, &quot;Total reads&quot;, &quot;Total reads&quot;, &quot;Total reads&quot;, &quot;Forward adapter&quot;, &quot;Forward adapter&quot;, &quot;Reverse adapter&quot;, &quot;Reverse adapter&quot;, &quot;No adapter&quot;),
-  values = c(10145854, 2466255, 2597579, 5082020, 1424196, 1042059, 1976909, 620670, 5082020),
-  type = &#39;sunburst&#39;,
-  branchvalues = &#39;total&#39;
-)
-p</code></pre>
-<div id="htmlwidget-a037416264cb17a464bf" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a037416264cb17a464bf">{"x":{"visdat":{"33e04147f6b9":["function () ","plotlyVisDat"]},"cur_data":"33e04147f6b9","attrs":{"33e04147f6b9":{"labels":["Total reads","Forward adapter","Reverse adapter","No adapter","Forward barcode","Forward adapter, no barcode","Reverse barcode","Reverse adapter, no barcode",""],"parents":["","Total reads","Total reads","Total reads","Forward adapter","Forward adapter","Reverse adapter","Reverse adapter","No adapter"],"values":[10145854,2466255,2597579,5082020,1424196,1042059,1976909,620670,5082020],"branchvalues":"total","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"sunburst"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Total reads","Forward adapter","Reverse adapter","No adapter","Forward barcode","Forward adapter, no barcode","Reverse barcode","Reverse adapter, no barcode",""],"parents":["","Total reads","Total reads","Total reads","Forward adapter","Forward adapter","Reverse adapter","Reverse adapter","No adapter"],"values":[10145854,2466255,2597579,5082020,1424196,1042059,1976909,620670,5082020],"branchvalues":"total","type":"sunburst","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="fc1" class="section level3">
+<h3>FC1</h3>
+<pre class="r"><code>plotSunburst(&#39;src/FC1.info&#39;)</code></pre>
+<div id="htmlwidget-d8c5752b56d6fc384086" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d8c5752b56d6fc384086">{"x":{"visdat":{"36e4362453d8":["function () ","plotlyVisDat"]},"cur_data":"36e4362453d8","attrs":{"36e4362453d8":{"labels":["Total reads","Forward adapter","Reverse adapter","No adapter","Forward barcode","No barcode","Reverse barcode","No barcode ",""],"parents":["","Total reads","Total reads","Total reads","Forward adapter","Forward adapter","Reverse adapter","Reverse adapter","No adapter"],"values":[9489955,2466255,2597579,4426121,1424196,1042059,1976909,620670,4426121],"branchvalues":"total","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"sunburst"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Total reads","Forward adapter","Reverse adapter","No adapter","Forward barcode","No barcode","Reverse barcode","No barcode ",""],"parents":["","Total reads","Total reads","Total reads","Forward adapter","Forward adapter","Reverse adapter","Reverse adapter","No adapter"],"values":[9489955,2466255,2597579,4426121,1424196,1042059,1976909,620670,4426121],"branchvalues":"total","type":"sunburst","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="fc2" class="section level3">
+<h3>FC2</h3>
+<pre class="r"><code>plotSunburst(&#39;src/FC2.info&#39;)</code></pre>
+<div id="htmlwidget-3d3d6f04b695315ce66e" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3d3d6f04b695315ce66e">{"x":{"visdat":{"36e462b2aad1":["function () ","plotlyVisDat"]},"cur_data":"36e462b2aad1","attrs":{"36e462b2aad1":{"labels":["Total reads","Forward adapter","Reverse adapter","No adapter","Forward barcode","No barcode","Reverse barcode","No barcode ",""],"parents":["","Total reads","Total reads","Total reads","Forward adapter","Forward adapter","Reverse adapter","Reverse adapter","No adapter"],"values":[9156458,2451401,2334876,4370181,1429032,1022369,1779981,554895,4370181],"branchvalues":"total","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"sunburst"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Total reads","Forward adapter","Reverse adapter","No adapter","Forward barcode","No barcode","Reverse barcode","No barcode ",""],"parents":["","Total reads","Total reads","Total reads","Forward adapter","Forward adapter","Reverse adapter","Reverse adapter","No adapter"],"values":[9156458,2451401,2334876,4370181,1429032,1022369,1779981,554895,4370181],"branchvalues":"total","type":"sunburst","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
 
